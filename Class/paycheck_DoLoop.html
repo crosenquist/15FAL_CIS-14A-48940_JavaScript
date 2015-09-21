@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>Paycheck DoWhile-Loop</title>
+			<script>
+                /*
+                Caleb Rosenquist
+                September 21st, 2015
+                Purpose: Logical Operators
+                */
+            </script>    
+    </head>
+    
+    <body>
+        <table width="200" border="1">
+          <tbody>
+            <tr>
+              <th>Hours</th>
+              <th>Paycheck</th>
+            </tr>
+            <script>
+				//Declare Variables
+				var payRate = prompt("Calculate your Paycheck Table \nPayrate in $:");
+				var numHours   = 85;  //Total number of hours in table
+				var payCheck   =  0;  //Initialize the pay check = 0
+				var doubleTime = 20;  //Double time starts 
+				var tripleTime = 40;  //Triple time starts
+				var hours      = 0;
+				
+				do{
+					document.write("<tr>");
+					  if(hours<=doubleTime){
+					  	payCheck = hours * payRate;
+					  }else if(hours<=tripleTime){
+					  	payCheck = doubleTime*payRate+(hours-doubleTime)*2*payRate;
+					  }else{
+					  	payCheck = doubleTime*payRate+(tripleTime-doubleTime)*2*payRate+(hours-tripleTime)*3*payRate;
+					  }
+				 	  document.write("<td>"+hours+"</td>");
+					  document.write("<td>"+payCheck.toFixed(2)+"</td>");
+					document.write("</tr>");
+				}while(++hours<=numHours);
+				
+			</script>
+          </tbody>
+        </table>
+    </body>
+</html>

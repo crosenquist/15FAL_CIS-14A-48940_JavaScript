@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Truth Table</title>
+        <script>
+			/*
+			Caleb Rosenquist
+			September 21st, 2015
+			Purpose: Logical Operators
+			*/
+		</script>
+    </head>
+    
+    <body>
+    <table width="600" border="1">
+  <tbody>
+    <tr>
+      <th>X</th>
+      <th>Y</th>
+      <th>!X</th>
+      <th>!Y</th>
+      <th>X&&Y</th>
+      <th>X||Y</th>
+      <th>X^Y</th>
+      <th>X^Y^Y</th>
+      <th>X^Y^X</th>
+      <th>!(X&&Y)</th>
+      <th>!X||!Y</th>
+      <th>!(X||!Y)</th>
+      <th>!X&&!Y</th>
+    </tr>
+    <tr>
+		<script>
+			var x = true;
+			var y = true;
+			document.write("<td>"+(x?"T":"F")+"</td>");
+			document.write("<td>"+(y?"T":"F")+"</td>");
+			document.write("<td>"+(!x?"T":"F")+"</td>");
+			document.write("<td>"+(!y?"T":"F")+"</td>");
+			document.write("<td>"+(x&&y?"T":"F")+"</td>");
+			document.write("<td>"+(x||y?"T":"F")+"</td>");
+        </script>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+    	<script>
+			var x = true;
+			var y = false;
+			document.write("<td>"+(x?"T":"F")+"</td>");
+			document.write("<td>"+(y?"T":"F")+"</td>");
+			document.write("<td>"+(!x?"T":"F")+"</td>");
+			document.write("<td>"+(!y?"T":"F")+"</td>");
+			document.write("<td>"+(x&&y?"T":"F")+"</td>");
+			document.write("<td>"+(x||y?"T":"F")+"</td>");
+        </script>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+    	<script>
+			var x = false;
+			var y = true;
+			document.write("<td>"+(x?"T":"F")+"</td>");
+			document.write("<td>"+(y?"T":"F")+"</td>");
+			document.write("<td>"+(!x?"T":"F")+"</td>");
+			document.write("<td>"+(!y?"T":"F")+"</td>");
+			document.write("<td>"+(x&&y?"T":"F")+"</td>");
+			document.write("<td>"+(x||y?"T":"F")+"</td>");
+        </script>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+    	<script>
+			var x = false;
+			var y = false;
+			document.write("<td>"+(x?"T":"F")+"</td>");
+			document.write("<td>"+(y?"T":"F")+"</td>");
+			document.write("<td>"+(!x?"T":"F")+"</td>");
+			document.write("<td>"+(!y?"T":"F")+"</td>");
+			document.write("<td>"+(x&&y?"T":"F")+"</td>");
+			document.write("<td>"+(x||y?"T":"F")+"</td>");
+        </script>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+    </body>
+</html>

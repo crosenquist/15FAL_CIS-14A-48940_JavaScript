@@ -17,9 +17,27 @@
 			//Declare Variables
 			var payRate = prompt("Calculate your Paycheck Table \nPayrate in $:");
 			var numHours   = 85;  //Total number of hours in table
-			var payCheck   =  0;  //Initialize the pay check = 0
 			var doubleTime = 20;  //Double time starts 
 			var tripleTime = 40;  //Triple time starts
+			
+			//Declare 1 Dimensional Arrays
+			var hoursWorkd = [];
+			var payCheck   = [];
+			
+			//Fill 1 Dimensional Array with data
+			for(var hours=0;hours<=numHours;hours++){
+				hoursWorked[hours]=hours;
+				if(hours<=doubleTime){
+				payCheck[hours] = hours * payRate;
+				}else if(hours<tripleTime){
+				payCheck[hours] = doubleTime*payRate+(hours-doubleTime)*2*payRate;
+				}else{
+				payCheck[hours] = doubleTime*payRate+(tripleTime-doubleTime)*2*payRate+(hours-tripleTime)*3*payRate;
+				}
+			}
+			
+			//Display the arrays
+			
 		</script>
         <table width="200" border="1">
           <tbody>
@@ -30,18 +48,12 @@
 			  </script>
             </tr>
             <script>
+			
 			//Loop to populate the table
 				for(var hours=0;hours<=numHours;hours++){
 					document.write("<tr>");
-					  if(hours<=doubleTime){
-					  	payCheck = hours * payRate;
-					  }else if(hours<tripleTime){
-					  	payCheck = doubleTime*payRate+(hours-doubleTime)*2*payRate;
-					  }else{
-					  	payCheck = doubleTime*payRate+(tripleTime-doubleTime)*2*payRate+(hours-tripleTime)*3*payRate;
-					  }
-				 	  document.write("<td>"+hours+"</td>");
-					  document.write("<td>"+payCheck.toFixed(2)+"</td>");
+				 	  document.write("<td>"+hoursWorked[hours]+"</td>");
+					  document.write("<td>"+payCheck[hours].toFixed(2)+"</td>");
 					document.write("</tr>");
 				}
 				

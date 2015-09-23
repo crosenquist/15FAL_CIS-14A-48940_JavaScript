@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+        <title>Paycheck For-Loop</title>
+			<script>
+                /*
+                Caleb Rosenquist
+                September 21st, 2015
+                Purpose: Logical Operators
+                */
+            </script>    
+</head>
+    
+    <body>
+    	<table width="200" border="1">
+            <tr>
+              <th>Hours</th>
+              <th>Pay Check
+            </tr>
+    		<script>
+				//Declare Variables
+				var payRate = prompt("Calculate your Paycheck Table \nPayrate in $:");
+				var numHours   = 85;  //Total number of hours in table
+				var doubleTime = 20;  //Double time starts 
+				var tripleTime = 40;  //Triple time starts
+				
+				//Declare 1 Dimensional Arrays
+				var hoursWorkd=[];
+				var payCheck=[];
+				
+				//Fill 1 Dimensional Array with data
+				for(var hours=0;hours<=numHours;hours++){
+					hoursWorked[hours]=hours;
+					if(hours<=doubleTime){
+					payCheck[hours] = hours * payRate;
+					}else if(hours<tripleTime){
+					payCheck[hours] = doubleTime*payRate+(hours-doubleTime)*2*payRate;
+					}else{
+					payCheck[hours] = doubleTime*payRate+(tripleTime-doubleTime)*2*payRate+(hours-tripleTime)*3*payRate;
+					}
+			}
+			
+			//Display the arrays
+				for(var hours=0;hours<=numHours;hours++){
+					document.write("<tr>");
+				 	  document.write("<td>"+hoursWorked[hours]+"</td>");
+					  document.write("<td>"+payCheck[hours].toFixed(2)+"</td>");
+					document.write("</tr>");
+				}
+				
+			</script>
+        </table>
+    </body>
+</html>

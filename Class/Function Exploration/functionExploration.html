@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function Exploration</title>
+        <script type="text/javascript"src="./functions/savings.js"></script>
+    </head>
+    
+    <body>
+		<script>
+        	//Declare Variables
+			var presentValue = 100;  //Present Value in $'s
+			var interestRate = 0.06; //Interest Rate %
+			var nYears       = 12;   //Number of Compounding Periods (in years)
+			
+			//Perform Calculation
+			var fv1 = save1(presentValue, interestRate, nYears);
+			var fv2 = save2(presentValue, interestRate, nYears);
+			var fv3 = save3(presentValue, interestRate, nYears);
+			var fv4 = save4(presentValue, interestRate, nYears);
+			var fv5 = save5(presentValue, interestRate, nYears);
+			
+			//Display the Resulta
+			document.write("<p>Present Value   = $"+presentValue+"</p>");
+			document.write("<p>Interest Rate   = "+(interestRate*100)+"%</p>");
+			document.write("<p>Number of Years = "+nYears+"</p>");
+			document.write("<p>Future Value 1  = $"+fv1.toFixed(2)+"</p>");
+			document.write("<p>Future Value 2  = $"+fv2.toFixed(2)+"</p>");
+			document.write("<p>Future Value 3  = $"+fv3.toFixed(2)+"</p>");
+			document.write("<p>Future Value 4  = $"+fv4.toFixed(2)+"</p>");
+			display(fv5);
+        </script>
+    </body>
+</html>

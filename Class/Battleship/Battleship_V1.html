@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<script>
+		//Declare Variables
+		var loc1 = Math.floor((Math.random()*5)+1);
+		var loc2 = loc1+1;
+		var loc3 = loc2+1;
+		var hit1 = false;
+		var hit2 = false;
+		var hit3 = false;
+		var numTorp = 5;
+		
+		//Loop to Sink the Battleship
+		while((hit1==false||hit2==false||hit3==false)&&(numTorp>0)){
+			//Launch Torpedo
+			do{
+				var torp=prompt("Given grid 1-7, where fire torpedo");
+			}while(torp<1||torp>7);
+			
+			//Decrement the number of Torpedos left
+			numTorp--;
+			
+			//Determine if you hear a boom
+			if(torp==loc1){
+				hit1=true;
+				alert("Target Hit!!!");
+			}else if(torp==loc2){
+				hit2=true;
+				alert("Target Hit!!!");
+			}else if(torp==loc3){
+				hit3=true;
+				alert("Target Hit!!!");
+			}else{
+				alert("Missfire");
+			}
+		}
+		
+		//Check torpedo count to determine end-game message.
+		if(numTorp>=0&&hit1&&hit2&&hit3)alert("You sunk my batthelship in "+(5-numTorp)+" guesses!!!");
+		else alert("Loser");
+    </script>
+</body>
+</html>
